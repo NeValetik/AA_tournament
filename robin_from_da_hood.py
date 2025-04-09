@@ -1,5 +1,3 @@
-import random
-
 def strategy(my_history: list[int], opponent_history: list[int], rounds: int | None) -> int:
   total_rounds = len(my_history)
   my_zeros = total_rounds-sum(my_history)
