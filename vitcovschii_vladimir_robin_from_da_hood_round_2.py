@@ -16,12 +16,11 @@ def strategy_round_2(opponent_id: int, my_history: dict[int, list[int]], opponen
     else:
         move = 1
 
-    # Choose next opponent: pick someone you haven't maxed 200 rounds with
     possible_opponents = [pid for pid, history in my_history.items() if len(history) < 200]
 
     if not possible_opponents:
-        next_opponent = opponent_id  # fallback if nobody is available
+        next_opponent = opponent_id 
     else:
-        next_opponent = possible_opponents[0]  # pick first available
+        next_opponent = possible_opponents[0]
 
     return move, next_opponent
